@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>funny circle</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px;">
+    <script>
+        class Circle {
+            r;
+            mau;
+            x;
+            y;
+
+            constructor(r, mau, x, y) {
+                this.r = r;
+                this.mau = mau;
+                this.x = x;
+                this.y = y;
+
+            }
+
+        }
+
+        let Circle1 = new Circle(200, 'red', 100, 100);
+        var ctx = document.getElementById("myCanvas").getContext("2d");
+        ctx.beginPath();
+        ctx.arc(Circle.x, Circle.y, Circle.r, 0, 2 * Math.PI);
+        ctx.fill();
+        createCircle();
+        // function createCircle(){
+        //     var ctx = document.getElementById("myCanvas").getContext("2d");
+        //     ctx.beginPath();
+        //     ctx.arc(Circle.x, Circle.y, Circle.r, 0, 2 * Math.PI);
+        //     ctx.fill();
+        // }
+        //
+        // createCircle();
+    </script>
+</body>
+</html>

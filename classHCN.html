@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lớp hình chữ nhât</title>
+</head>
+<body>
+<canvas id="hinhcn" width="2000px" height="800px" ></canvas>
+<script>
+    let Hcn = function (dai, rong) {
+        this.dai = dai;
+        this.rong = rong;
+        // tạo lớp hình chữ nhật với phương thức có các tham số truyền vào
+
+
+        this.getDai = function () {
+            return dai;
+        }
+        this.getRong = function () {
+            return rong;
+        }
+        // phương thức trả về dài rộng của hình chữ nhật
+
+
+        this.getChuVi = function () {
+            return (dai + rong) * 2;
+        }
+        this.getDientich = function () {
+            return dai * rong;
+        }
+        // xây dựng phương thức tính diện tích
+    }
+
+
+    let hcn = new Hcn(500, 300);
+    // tạo hình chữ nhật với độ dài 2 cạnh
+
+
+    let dai = hcn.getDai();
+    let rong = hcn.getRong();
+    let chuvi = hcn.getChuVi();
+    let dientich = hcn.getDientich();
+    // truy cập phương thức và gán độ dài cho chúng
+
+
+    alert('chu vi là: ' +chuvi + 'diện tích là: ' + dientich);
+    // hiển thị  kết quả
+
+
+
+    function createCircle() {
+        let ctx = document.getElementById("hinhcn").getContext("2d");
+        ctx.fillRect(50, 50, 500, 300);
+    }
+    createCircle();
+    // vẽ hình chữ nhật bằng canvas
+</script>
+</body>
+</html>

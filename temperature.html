@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>temperature</title>
+</head>
+<body>
+<script>
+    class doC{
+        c;
+        chuyendoiF;
+        chuyendoiK;
+        constructor(c) {
+            this.c = c;
+            this.chuyendoiF = 9*c/5 + 32;
+            this.chuyendoiK = c + 273.15;
+        }
+    }
+    let kq = new doC(25);
+    alert('độ k là: ' +kq.chuyendoiK + 'độ f là: ' +kq.chuyendoiF);
+</script>
+</body>
+</html>

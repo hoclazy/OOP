@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let arr = [1,2,3,4,5];
+let arrnew=[];
+    function maxMinAvg(arr) {
+        let max = arr[0];
+        for ( let i = 0; i< arr.length; i++) {
+            if(max < arr[i]) {
+                max = arr[i];
+            }
+        }
+        arrnew.push(max);
+        return max;
+    }
+    console.log(arrnew);
+</script>
+</body>
+</html>

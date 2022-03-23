@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hình chữ nhật</title>
+</head>
+<body>
+<canvas id="cv" style="width: 1000px; height: 1000px;"></canvas>
+<script>
+    class HCN {
+        dai;
+        rong;
+        mau;
+        x;
+        y;
+
+        constructor(dai, rong, mau, x, y) {
+            this.dai=dai;
+            this.rong=rong;
+            this.mau=mau;
+            this.x=x;
+            this.y=y;
+        }
+        tinhCV() {
+            return( this.dai + this.rong) * 2;
+        }
+        tinhDT() {
+            return this.dai *  this.rong;
+        }
+        ve() {
+            let ctx = document.getElementById('cv').getContext('2d')
+            ctx.beginPath();
+            ctx.fillStyle = this.mau;
+            ctx.fillRect(this.x, this.y, this.dai, this.rong);
+
+            ctx.closePath();
+        }
+
+    }
+    let h1= new HCN(100, 30, 'red', 10, 10);
+    alert(h1.tinhCV());
+    alert(h1.tinhDT());
+    h1.ve();
+</script>
+</body>
+</html>
